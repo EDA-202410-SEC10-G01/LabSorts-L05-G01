@@ -102,7 +102,7 @@ def printSortResults(sort_books, sample=3):
         while i <= sample:
             book = lt.getElement(sort_books, i)
             print('Titulo: ' + book['title'] + ' ISBN: ' +
-            book['isbn'] + ' Rating: ' + book['average_rating'])
+                    book['isbn'] + ' Rating: ' + book['average_rating'])
             i += 1
         print("Los", sample, "últimos libros ordenados son:")
         i = size - sample + 1
