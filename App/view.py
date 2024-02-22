@@ -102,7 +102,7 @@ def printSortResults(sort_books, sample=3):
         while i <= sample:
             book = lt.getElement(sort_books, i)
             print('Titulo: ' + book['title'] + ' ISBN: ' +
-            book['isbn'] + ' Rating: ' + book['average_rating'])
+                    book['isbn'] + ' Rating: ' + book['average_rating'])
             i += 1
         print("Los", sample, "últimos libros ordenados son:")
         i = size - sample + 1
@@ -110,7 +110,7 @@ def printSortResults(sort_books, sample=3):
             book = lt.getElement(sort_books, i)
             print('Titulo: ' + book['title'] + ' ISBN: ' +
                     book['isbn'] + ' Rating: ' + book['average_rating'])
-        i += 1
+            i += 1
 
 
 # Variable asociada al controlador de la vista, por defecto None
@@ -184,8 +184,12 @@ if __name__ == "__main__":
             # TODO completar modificaciones para el lab 5
             print("Ordenando los libros por rating ...")
             result = controller.sortBooks(control)
-            print("tiempo de ejecución:", f"{result:.3f}", "[ms]")
-
+            sortedBooks = result[0]
+            DeltaTime = f"{result[1]:.3f}"
+            print("Para", size, "elementos, el tiempo es:",
+                    str(DeltaTime), "[ms]")
+            printSortResults(sortedBooks)
+            
         elif int(inputs[0]) == 0:
             # confirmar salida del programa
             end_str = "¿desea salir del programa? (s/n): "
