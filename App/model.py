@@ -334,3 +334,5 @@ def sortBooks(catalog):
     # TODO completar los cambios del return para el sort lab 5 (Parte 1).
     sorted_books = catalog["booksublist"]
     sort_algorithm.sort(sorted_books, evalRatings)
+
+    return sorted_books

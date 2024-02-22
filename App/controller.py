@@ -134,10 +134,10 @@ def sortBooks(control):
     """
     # TODO incluir resutlado en la toma de tiempos (Parte 1).
     start_time = getTime()
-    model.sortBooks(control["model"])
+    sorted_books = model.sortBooks(control["model"])
     end_time = getTime()
     delta_time = deltaTime(start_time, end_time)
-    return delta_time
+    return sorted_books, delta_time
 
 
 # Funciones de consulta sobre el catálogo

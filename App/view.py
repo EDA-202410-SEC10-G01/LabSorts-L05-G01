@@ -90,7 +90,27 @@ def printBestBooks(books):
 
 def printSortResults(sort_books, sample=3):
     # TODO completar funcion para imprimir resultados sort lab 5
-    pass
+    size = lt.size(sort_books)
+    if size <= sample*2:
+        print("Los", size, "libros ordenados son:")
+        for book in lt.iterator(sort_books):
+            print('Titulo: ' + book['title'] + ' ISBN: ' +
+                    book['isbn'] + ' Rating: ' + book['average_rating'])
+    else:
+        print("Los", sample, "primeros libros ordenados son:")
+        i = 1
+        while i <= sample:
+            book = lt.getElement(sort_books, i)
+            print('Titulo: ' + book['title'] + ' ISBN: ' +
+            book['isbn'] + ' Rating: ' + book['average_rating'])
+            i += 1
+        print("Los", sample, "últimos libros ordenados son:")
+        i = size - sample + 1
+        while i <= size:
+            book = lt.getElement(sort_books, i)
+            print('Titulo: ' + book['title'] + ' ISBN: ' +
+                    book['isbn'] + ' Rating: ' + book['average_rating'])
+        i += 1
 
 
 # Variable asociada al controlador de la vista, por defecto None
