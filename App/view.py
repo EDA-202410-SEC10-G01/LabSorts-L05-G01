@@ -110,7 +110,7 @@ def printSortResults(sort_books, sample=3):
             book = lt.getElement(sort_books, i)
             print('Titulo: ' + book['title'] + ' ISBN: ' +
                     book['isbn'] + ' Rating: ' + book['average_rating'])
-        i += 1
+            i += 1
 
 
 # Variable asociada al controlador de la vista, por defecto None

@@ -325,7 +325,7 @@ def cmpBooks(bookid1, book):
 
 def evalRatings(book1, book2):
     # TODO modificar operador de comparacion del lab 5
-    return (float(book1["average_rating"]) > float(book2["average_rating"]))
+    return (float(book1["average_rating"]) < float(book2["average_rating"]))
 
 
 # Funciones de ordenamiento
