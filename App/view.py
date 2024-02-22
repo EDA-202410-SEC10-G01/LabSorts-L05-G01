@@ -181,10 +181,12 @@ if __name__ == "__main__":
             control = controller.setBookSublist(control, size)
 
         elif int(inputs[0]) == 7:
-            # TODO completar modificaciones para el lab 5
-            print("Ordenando los libros por rating ...")
             result = controller.sortBooks(control)
-            print("tiempo de ejecución:", f"{result:.3f}", "[ms]")
+            sortedBooks = result[0]
+            DeltaTime = f"{result[1]:.3f}"
+            print("Para", size, "elementos, el tiempo es:",
+                    str(DeltaTime), "[ms]")
+            printSortResults(sortedBooks)
 
         elif int(inputs[0]) == 0:
             # confirmar salida del programa
