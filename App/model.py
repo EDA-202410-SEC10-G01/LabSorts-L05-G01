@@ -34,9 +34,9 @@ from DISClib.Algorithms.Sorting import mergesort as mes
 from DISClib.Algorithms.Sorting import quicksort as qus
 from DISClib.Algorithms.Sorting import heapsort as hes
 from DISClib.Algorithms.Sorting import bogosort as bos
-
+from DISClib.Algorithms.Sorting import customsort as custom
 # TODO importar el modulo de ordenamiento personalizado para el lab 5
-from DISClib.Algorithms.Sorting import customsort as cus
+from DISClib.Algorithms.Sorting import customsort as tim
 assert cf
 
 """
@@ -222,10 +222,12 @@ def selectSortAlgorithm(algo_opt):
     # opcion 6: Custom Sort, timsort o bucketsort
     # TODO completar el ordenamiento personalizado para el lab 5
     elif algo_opt == 8:
-        sort_algorithm = cus
-        algo_msg = "Seleccionó la configuración - Custom Sort (Tim, Patience)"
+        sort_algorithm = tim
+        algo_msg = "Seleccionó la configuración - Custom Sort (Tim)"
     # respuesta final: algoritmo de ordenamiento y texto de configuracion
     return sort_algorithm, algo_msg
+
+        
 
 
 def setBookSublist(catalog, size):
